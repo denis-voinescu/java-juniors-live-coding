@@ -153,7 +153,7 @@ public class OrderUtil {
 
         return ordersCopy
                 .stream()
-                .filter((order -> order.getProductName().contains(product)))
+                .filter((order -> order.getProductName().toLowerCase().contains(product.toLowerCase())))
                 .findFirst();
 
     }
